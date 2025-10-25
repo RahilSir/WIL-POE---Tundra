@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookkeeping Services - Tundra Tax & Accounting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+
+.header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px;
+    }
+    .header .container .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .header .container .brand img { height: 46px; border-radius: 8px; }
+    .logo { margin: 0; }
+
+    nav a {
+  color: black; /* default color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green; /* hover effect works now */
+}
+
+
+
+.hero {
+  background: url("office.jpg") no-repeat center center;
+  background-size: cover;   /* makes it fill the container */
+  color: white;             /* optional: text color for contrast */
+  padding: 100px 20px;      /* space inside the section */
+}
+
+.hero .container {
+  background: rgba(0, 0, 0, 0.5); /* optional: dark overlay so text is readable */
+  padding: 40px;
+  border-radius: 8px;            /* optional styling */
+}
+
+
+footer {
+  background-color: #333;   /* dark grey */
+  color: #fff;              /* white text for contrast */
+  text-align: center;       /* center the text */
+  padding: 20px 0;          /* spacing inside */
+  margin-top: 40px;         /* space above footer */
+  font-size: 14px;          /* smaller text */
+
+}
+
+ .services-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services-list li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-left: 5px solid #333;
+      font-size: 18px;
+    }
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style (Services link) */
+
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;   /* dark dropdown background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.logo-text {
+  color: #04c707;    /* makes heading green */
+  margin: 0;
+  white-space: nowrap;
+}
+.sars-logo {
+  width: 150px;   /* adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+  <div class="container">
+   <div class="brand">
+  <img src="logo.jpg" alt="Tundra Logo" class="logo-img">
+  <h1 class="logo-text">Tundra Tax & Accounting</h1>
+</div>
+
+    <nav>
+      <a href="index.php">Home</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html">Services</a>
+          <a href="bookkeeping.html">Bookkeeping</a>
+          <a href="tax-services.html">Tax Services</a>
+        </div>
+      </div>
+      
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="registrationPage.php">Register</a>
+      <a href="login.php">Login</a>
+    </nav>
+  </div>
+</header>
+
+  <div class="container">
+    <h1>Bookkeeping Services</h1>
+   <img src="sars.jpg" class="sars-logo" alt="SARS Logo">
+
+    <ul class="services-list">
+      <li>SARS Registrations</li>
+      <li>VAT Submissions</li>
+      <li>Management Accounts</li>
+      <li>Payroll</li>
+      <li>Statutory Returns (VAT, PAYE, etc.)</li>
+      <li>Accounts Payable and Receivable</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tundra Tax & Accounting. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
