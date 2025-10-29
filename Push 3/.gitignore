@@ -1,0 +1,40 @@
+# Logs
+logs/*.log
+!logs/.gitkeep
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Composer
+# vendor/ - Keeping vendor files in repository
+
+# Node modules (if using npm)
+node_modules/
+
+# Cache files
+cache/
+*.cache
+
+# Backup files
+*.bak
+*.backup

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Tundra Legal</title>
+      <link rel="stylesheet" href="../../assets/css/style.css">
+
+      <style>.header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px;
+    }
+    .header .container .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .header .container .brand img { height: 46px; border-radius: 8px; }
+    .logo { margin: 0; }
+
+    nav a {
+  color: black; /* default color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green; /* hover effect works now */
+}
+
+
+.hero {
+      background: url("services.jpg") no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 8px;
+    }
+
+footer {
+  background-color: #333;   /* dark grey */
+  color: #fff;              /* white text for contrast */
+  text-align: center;       /* center the text */
+  padding: 20px 0;          /* spacing inside */
+  margin-top: 40px;         /* space above footer */
+  font-size: 14px;          /* smaller text */
+
+}
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style (Services link) */
+
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;   /* dark dropdown background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+  <header class="header">
+  <div class="container">
+    <div class="brand">
+      <img src="../../assets/images/logo.jpg" alt="Tundra Logo">
+      <h1 class="logo">Tundra Tax & Accounting</h1>
+    </div>
+    <nav>
+      <a href="../../index.php">Home</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html">Services</a>
+          <a href="bookkeeping.html">Bookkeeping</a>
+          <a href="tax-services.html">Tax Services</a>
+        </div>
+      </div>
+      
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="../auth/registrationPage.php">Register</a>
+      <a href="../auth/login.php">Login</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>Professional, reliable and cost-effective solutions for your legal and accounting needs.</p>
+    </div>
+  </section>
+
+
+  <br>
+  <br>
+  <main>
+    
+    <div class="services-grid">
+
+
+        <div class="service-card">
+        <img src="../../assets/images/Trust.jpg"  />
+        <h3>Company Registration</h3>
+        <p>Registration of Companies.</p>
+        <a href="../company/registerCompany.php" class="btn-register">Register Your Company</a>
+      </div>
+      
+      <div class="service-card">
+        <img src="../../assets/images/Trust.jpg"  />
+        <h3>Trusts</h3>
+        <p>Registration of new Trusts and amendments across all Master of High Court offices in the Republic.</p>
+      </div>
+
+      <div class="service-card">
+         <img src="../../assets/images/deceasedestate.jpg"  />
+        <h3>Deceased Estate Reporting</h3>
+        <p>Reporting of new deceased estates for letters of Executorship or Letters of Authority to be issued at all Master of High Court offices in the country.</p>
+      </div>
+
+      <div class="service-card">
+         <img src="../../assets/images/deceasedestate.jpg"  />
+        <h3>Deceased Estate Administration</h3>
+        <p>We administer deceased estates and provide all necessary requirements to wind-up an estate.</p>
+      </div>
+
+      <div class="service-card">
+         <img src="../../assets/images/deceasedestate.jpg"  />
+        <h3>Deceased Estate Amendments</h3>
+        <p>Replacing executors and addition of new assets.</p>
+      </div>
+
+      <div class="service-card">
+         <img src="../../assets/images/certified.jpg"  />
+        <h3>Certified Copies</h3>
+        <p>We acquire certified documents from Master of High Court such as Authority Letter for Trusts, Letters of Executorship, Letters of Authority, Wills, or any document that you may require from the master’s office.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="../../assets/images/deed.jpg"  />
+        <h3>Deeds</h3>
+        <p>We provide Deeds search to establish ownership of a property and history of ownership.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="../../assets/images/tracing.jpg"  />
+        <h3>Tracing</h3>
+        <p>We offer tracing services to trace individuals and unclaimed benefits on behalf of beneficiaries.</p>
+        <p><strong>*Tundra Legal charges no fee upfront for tracing; payment is only required once the tracing has been successful.</strong></p>
+        <p>We also trace if a deceased estate was reported at any Master High Court.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="../../assets/images/referencecheck.png"  />
+        <h3>Reference Checks</h3>
+        <ul>
+          <li>Criminal Records Checks</li>
+          <li>Credit Reports</li>
+          <li>Matric & Tertiary Qualification Verifications</li>
+          <li>ID Verifications & Fraud Listings</li>
+          <li>Driving Licences & Professional Driving Permit</li>
+          <li>Fit & Proper and FAIS Comprehensive Checks</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <img src="../../assets/images/debt.jpg"  />
+        <h3>Debt Collection</h3>
+        <p>We offer debt collection services on behalf of our clients and offer customized solutions to recover debt at a reasonable fee.</p>
+      </div>
+
+    </div>
+    
+  
+
+
+  </main>
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tundra Tax & Accounting. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
