@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Tundra Tax & Accounting</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+  .header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px;
+    }
+    .header .container .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .header .container .brand img { height: 46px; border-radius: 8px; }
+    .logo { margin: 0; }
+
+    nav a {
+  color: black; /* default color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green; /* hover effect works now */
+}
+
+
+.hero {
+  background: url("cpt.jpg") no-repeat center center;
+  background-size: cover;   /* makes it fill the container */
+  color: white;             /* optional: text color for contrast */
+  padding: 100px 20px;      /* space inside the section */
+}
+
+.hero .container {
+  background: rgba(0, 0, 0, 0.5); /* optional: dark overlay so text is readable */
+  padding: 40px;
+  border-radius: 8px;            /* optional styling */
+}
+
+footer {
+  background-color: #333;   /* dark grey */
+  color: #fff;              /* white text for contrast */
+  text-align: center;       /* center the text */
+  padding: 20px 0;          /* spacing inside */
+  margin-top: 40px;         /* space above footer */
+  font-size: 14px;          /* smaller text */
+
+}
+
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style (Services link) */
+
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;   /* dark dropdown background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  
+  <header class="header">
+  <div class="container">
+    <div class="brand">
+      <img src="../../assets/images/logo.jpg" alt="Tundra Logo">
+      <h1 class="logo">Tundra Tax & Accounting</h1>
+    </div>
+    <nav>
+      <a href="../../index.php">Home</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html">Services</a>
+          <a href="bookkeeping.html">Bookkeeping</a>
+          <a href="tax-services.html">Tax Services</a>
+        </div>
+      </div>
+      
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="../auth/registrationPage.php">Register</a>
+      <a href="../auth/login.php">Login</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Page Title -->
+  <section class="hero">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We provide cost-effective, high-value solutions to meet all of your accounting needs.</p>
+       
+      
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="container contact-page">
+    <p>We work hard to get to know you and your business so that we can deliver timely, individual advice to help you improve your business.</p>
+    <p><strong>Have a question about our services?</strong></p>
+
+    <div class="office">
+      <h3>Head Office - Johannesburg</h3>
+      <p>1A Waterford Drive, Maroeladal, Fourways, 2192</p>
+      <p>P.O. Box: 70141 Bryanston, 2021 Johannesburg, South Africa</p>
+      <p>Office: +27 (011) 794 5856, +27 079 871 5003</p>
+      <p>Email: <a href="info@tundratax.co.za">info@tundratax.co.za</a></p>
+
+
+<div class="map-container">
+   <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.8795228723543!2d27.982348175192346!3d-26.024524277187663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95775e93deec5b%3A0x3bd89337612e82c1!2sTundra%20Tax%20and%20Accounting!5e1!3m2!1sen!2sza!4v1755009054273!5m2!1sen!2sza" 
+ 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"  >
+</iframe> 
+</div>
+
+
+
+
+    </div>
+
+    <div class="office">
+      <h3>Century City - Cape Town</h3>
+      <p>Unit 24, Millennium Business Park, 19 Edison Way, Century City, Cape Town, 7441</p>
+      <p>Office: 021 054 4451</p>
+      <p>Email: <a href="info@tundratax.co.za">info@tundratax.co.za</a></p>
+
+<div class="map-container">
+   <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.4320298950097!2d18.517621675508813!3d-33.881333973221665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d18f5deb399%3A0xfa0dad579d8ba1e6!2sMillennium%20Business%20Park!5e1!3m2!1sen!2sza!4v1755080439766!5m2!1sen!2sza"
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"  >
+</iframe> 
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="office">
+      <h3>Nelspruit</h3>
+      <p>Office: +27 (013) 007 9166</p>
+      <p>Email: <a href="info@tundratax.co.za">info@tundratax.co.za</a></p>
+    </div>
+
+    <div class="office">
+      <h3>Polokwane</h3>
+      <p>Office: +27 (015) 007 9484</p>
+      <p>Email: <a href="info@tundratax.co.za">info@tundratax.co.za</a></p>
+    </div>
+
+    
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tundra Tax & Accounting. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

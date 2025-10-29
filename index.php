@@ -11,7 +11,7 @@ $dbname = "tundra";         // your database name
 <head>
   <meta charset="UTF-8">
   <title>Tundra Tax & Accounting</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
   .header .container {
       display: flex; align-items: center; justify-content: space-between;
@@ -38,7 +38,7 @@ nav a:hover {
 
 
 .hero {
-  background: url("office.jpg") no-repeat center center;
+  background: url("assets/images/office.jpg") no-repeat center center;
   background-size: cover;   /* makes it fill the container */
   color: white;             /* optional: text color for contrast */
   padding: 100px 20px;      /* space inside the section */
@@ -109,7 +109,7 @@ footer {
   <header class="header">
   <div class="container">
     <div class="brand">
-      <img src="logo.jpg" alt="Tundra Logo">
+      <img src="assets/images/logo.jpg" alt="Tundra Logo">
       <h1 class="logo">Tundra Tax & Accounting</h1>
     </div>
     <nav>
@@ -117,18 +117,18 @@ footer {
       
       <!-- Dropdown Menu -->
       <div class="dropdown">
-        <a href="services.html" class="dropbtn">Services ▾</a>
+        <a href="pages/public/services.html" class="dropbtn">Services ▾</a>
         <div class="dropdown-content">
-          <a href="services.html">Services</a>
-          <a href="bookkeeping.html">Bookkeeping</a>
-          <a href="tax-services.html">Tax Services</a>
+          <a href="pages/public/services.html">Services</a>
+          <a href="pages/public/bookkeeping.html">Bookkeeping</a>
+          <a href="pages/public/tax-services.html">Tax Services</a>
         </div>
       </div>
       
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About Us</a>
-      <a href="registrationPage.php">Register</a>
-      <a href="login.php">Login</a>
+      <a href="pages/public/contact.html">Contact</a>
+      <a href="pages/public/about.html">About Us</a>
+      <a href="pages/auth/registrationPage.php">Register</a>
+      <a href="pages/auth/login.php">Login</a>
     </nav>
   </div>
 </header>
@@ -143,7 +143,7 @@ footer {
     <div class="container">
       <h2>Your Trusted Tax & Accounting Partner</h2>
       <p>100% Black-owned South African firm of accountants, tax consultants, auditors, and business advisors.</p>
-      <a href="contact.html" class="btn">Get in Touch</a>
+      <a href="pages/public/contact.html" class="btn">Get in Touch</a>
     </div>
   </section>
 
@@ -222,7 +222,7 @@ footer {
   <!-- Contact -->
   <section id="contact" class="contact container">
     <h2>Contact Us</h2>
-     <a href="contact.html" class="btn">Get in Touch</a>
+     <a href="pages/public/contact.html" class="btn">Get in Touch</a>
     <p>Email: <a href="info@tundratax.co.za">info@tundratax.co.za</a> |  Phone: +27 (011) 794-5856</p>
     
 
