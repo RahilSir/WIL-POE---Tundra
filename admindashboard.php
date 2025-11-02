@@ -44,7 +44,7 @@ $pdfFiles = glob($uploadDir . "*.pdf");
 
         h1 {
             text-align: center;
-            color: #2f3640;
+           color: #04c707;
         }
 
         .logout {
