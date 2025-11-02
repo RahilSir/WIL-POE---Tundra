@@ -229,7 +229,7 @@ footer {
 
 
 
-<h2>Users</h2>
+<h2>Manage Users</h2>
 
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
@@ -269,7 +269,7 @@ footer {
 
 
  <!-- PDF FILES SECTION -->
-    <h2>Registrations Documents</h2>
+    <h2>Registration Documents</h2>
    <table>
     <tr>
         <th>File Name</th>
