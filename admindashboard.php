@@ -34,6 +34,7 @@ $pdfFiles = glob($uploadDir . "*.pdf");
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
