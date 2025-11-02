@@ -1,13 +1,15 @@
 <?php
-session_start();
+// registrationpage.php
 
-// Database connection
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "tundra";
 
+// Connect to database
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -15,39 +17,32 @@ if ($conn->connect_error) {
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST['name']);
     $user = trim($_POST['username']);
-    $pass = $_POST['password'];
+    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Fetch password and role
-    $stmt = $conn->prepare("SELECT password, role FROM users WHERE username = ?");
-    $stmt->bind_param("s", $user);
-    $stmt->execute();
-    $stmt->store_result();
-    $stmt->bind_result($hashed_password, $role);
+    // Check if username already exists
+    $check = $conn->prepare("SELECT id FROM users WHERE username=?");
+    $check->bind_param("s", $user);
+    $check->execute();
+    $check->store_result();
 
-    if ($stmt->num_rows > 0) {
-        $stmt->fetch();
-
-        if (password_verify($pass, $hashed_password)) {
-            // ✅ Save session for logged-in user
-            $_SESSION['username'] = $user;
-            $_SESSION['role'] = $role;
-
-            // ✅ Redirect based on role
-            if ($role === 'admin') {
-                header("Location: admindashboard.php");
-            } else {
-                header("Location: index.php");
-            }
-            exit();
-        } else {
-            $message = "❌ Invalid password!";
-        }
+    if ($check->num_rows > 0) {
+        $message = "❌ Username already taken!";
     } else {
-        $message = "❌ Username not found!";
-    }
+        $defaultRole = 'user';
+$stmt = $conn->prepare("INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $name, $user, $pass, $defaultRole);
 
-    $stmt->close();
+
+        if ($stmt->execute()) {
+            $message = "✅ Registration successful! You can now <a href='login.php'>login</a>.";
+        } else {
+            $message = "❌ Error: " . $stmt->error;
+        }
+        $stmt->close();
+    }
+    $check->close();
 }
 
 $conn->close();
@@ -57,7 +52,8 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Tundra Tax & Accounting</title>
+    <title>Register - Tundra Tax & Accounting</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -119,27 +115,29 @@ $conn->close();
     </style>
 </head>
 <body>
-<div class="container">
-    <img src="logo.jpg" alt="Tundra Logo">
+    <div class="container">
+        <img src="logo.jpg" alt="Tundra Logo">
 
-    <?php if ($message != ""): ?>
-        <div class="message <?php echo (str_contains($message, '❌')) ? 'error' : ''; ?>">
-            <?php echo $message; ?>
-        </div>
-    <?php endif; ?>
+        <?php if ($message != ""): ?>
+            <div class="message <?php echo (str_contains($message, '❌')) ? 'error' : ''; ?>">
+                <?php echo $message; ?>
+            </div>
+        <?php endif; ?>
 
-    <form method="POST">
-        <h2>Login</h2>
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
+        <form method="POST">
+            <h2>Register </h2>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
 
-        <div class="login-link">
-            <p>Don't have an account? 
-                <a href="registrationPage.php" class="btn-link">Register Here</a>
-            </p>
-        </div>
-    </form>
+            <!-- Login Button -->
+<div class="login-link">
+    <p>Already have an account? 
+        <a href="login.php" class="btn-link">Login Here</a>
+    </p>
 </div>
+        </form>
+    </div>
 </body>
 </html>

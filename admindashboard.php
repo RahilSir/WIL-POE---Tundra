@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch all users
-$sql = "SELECT id, username, name   FROM users";
+$sql = "SELECT id, username, name, role   FROM users";
 $result = $conn->query($sql);
 
 // Fetch PDF files from uploads folder
@@ -231,31 +231,42 @@ footer {
 
 <h2>Users</h2>
 
-        <table>
-            <tr>
-                <th>ID</th>
-                 <th>Name</th>
-                <th>Username</th>
-                <th>Role</th>
-            </tr>
+<table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Action</th>
+        <th>Role</th>
+        
+    </tr>
 
-            <?php
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>
-                            <td>{$row['id']}</td>
-                             <td>{$row['name']}</td>
-                            <td>{$row['username']}</td>
-                            
-                            
-                          </tr>";
-                }
-            } else {
-                echo "<tr><td colspan='4' style='text-align:center;'>No users found.</td></tr>";
-            }
-            ?>
+    <?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['name']}</td>
+                    <td>{$row['username']}</td>
+                    <td>
+                        <form method='POST' action='update_role.php'>
+                            <input type='hidden' name='user_id' value='{$row['id']}'>
+                            <select name='role'>
+                                <option value='user' " . ($row['role'] == 'user' ? 'selected' : '') . ">User</option>
+                                <option value='admin' " . ($row['role'] == 'admin' ? 'selected' : '') . ">Admin</option>
+                            </select>
+                            <button type='submit'>Update</button>
+                        </form>
+                    </td>
+                    <td>{$row['role']}</td>
+                  </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='5' style='text-align:center;'>No users found.</td></tr>";
+    }
+    ?>
+</table>
 
-        </table>
 
  <!-- PDF FILES SECTION -->
     <h2>Registrations Documents</h2>
