@@ -1,15 +1,11 @@
 <?php
 session_start();
 
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tundra";
+// Database connection using centralized db.php
+require_once '../../includes/db.php';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Database connection failed. Please try again later.");
 }
 
 $message = "";

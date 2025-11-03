@@ -1,17 +1,11 @@
 <?php
 // registrationpage.php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tundra";
+// Database connection using centralized db.php
+require_once '../../includes/db.php';
 
-// Connect to database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Database connection failed. Please try again later.");
 }
 
 $message = "";

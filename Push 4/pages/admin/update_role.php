@@ -1,14 +1,17 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tundra"; // change if needed
+session_start();
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Check if user is logged in and is admin
+if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../auth/login.php");
+    exit();
+}
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Database connection using centralized db.php
+require_once '../../includes/db.php';
+
+if (!$conn) {
+    die("Database connection failed");
 }
 
 // Check if POST data is received

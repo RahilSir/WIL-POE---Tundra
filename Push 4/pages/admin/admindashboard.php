@@ -7,16 +7,14 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tundra";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Check if user is admin
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../../index.php");
+    exit();
 }
+
+// Database connection using centralized db.php
+require_once '../../includes/db.php';
 
 // Fetch all users
 $sql = "SELECT id, username, name, role   FROM users";
