@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Services - Tundra Tax & Accounting</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+     .header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px;
+    }
+    .header .container .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .header .container .brand img { height: 46px; border-radius: 8px; }
+    .logo { margin: 0; }
+
+    nav a {
+  color: black; /* default color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: green; /* hover effect works now */
+}
+
+
+
+.hero {
+  background: url("../../assets/images/office.jpg") no-repeat center center;
+  background-size: cover;   /* makes it fill the container */
+  color: white;             /* optional: text color for contrast */
+  padding: 100px 20px;      /* space inside the section */
+}
+
+.hero .container {
+  background: rgba(0, 0, 0, 0.5); /* optional: dark overlay so text is readable */
+  padding: 40px;
+  border-radius: 8px;            /* optional styling */
+}
+
+
+footer {
+  background-color: #333;   /* dark grey */
+  color: #fff;              /* white text for contrast */
+  text-align: center;       /* center the text */
+  padding: 20px 0;          /* spacing inside */
+  margin-top: 40px;         /* space above footer */
+  font-size: 14px;          /* smaller text */
+
+}
+
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style (Services link) */
+
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;   /* dark dropdown background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="brand">
+      <img src="../../assets/images/logo.jpg" alt="Tundra Logo">
+      <h1 class="logo">Tundra Tax & Accounting</h1>
+    </div>
+    <nav>
+      <a href="../../index.php">Home</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="services.html">Services</a>
+          <a href="bookkeeping.html">Bookkeeping</a>
+          <a href="tax-services.html">Tax Services</a>
+        </div>
+      </div>
+      
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="../auth/registrationPage.php">Register</a>
+      <a href="../auth/login.php">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Tax Services</h1>
+  <p><strong>What We Offer</strong></p>
+  <p>
+    We have carried out extensive work on VAT and customs, including legal settlement to SARS disputes, obtaining refunds, and reversal of SARS rulings. 
+    Our corporate tax work includes proactive planning, handling technically complex matters, dealing with external auditor queries, and rebutting matters on behalf of our clients.
+  </p>
+
+  <!-- Corporate Tax -->
+  <section>
+    <h2>Corporate Tax</h2>
+    <p>By keeping up to date with new tax laws, we identify key tax planning opportunities that minimize liabilities.</p>
+    <ul>
+      <li>Corporate Tax Consultancy</li>
+      <li>Corporate Strategic Tax Planning</li>
+      <li>Tax Returns and Computations</li>
+    </ul>
+  </section>
+
+  <!-- Tax Compliance -->
+  <section>
+    <h2>Tax Compliance Services</h2>
+    <ul>
+      <li>Preparation & submission of Corporate and Individual Income Tax returns</li>
+      <li>Provisional Tax Assessments</li>
+      <li>Tax computations</li>
+      <li>Liaising with Tax Authorities</li>
+    </ul>
+  </section>
+
+  <!-- Tax Opinions -->
+  <section>
+    <h2>Tax Opinions</h2>
+    <p>We provide specific tax opinions tailored to our clients’ circumstances.</p>
+  </section>
+
+  <!-- Tax Rulings -->
+  <section>
+    <h2>Tax Rulings</h2>
+    <p>We can request and obtain official tax rulings from the Income Tax Office relevant to your company.</p>
+  </section>
+
+  <!-- Tax Certificates -->
+  <section>
+    <h2>Tax Certificates & Related Services</h2>
+    <p>We liaise with authorities to obtain:</p>
+    <ul>
+      <li>Tax clearance certificates</li>
+      <li>Tax residence certificates</li>
+      <li>Double taxation certificates</li>
+    </ul>
+  </section>
+
+  <!-- Individual Tax -->
+  <section>
+    <h2>Individual Tax-related Services</h2>
+    <p>Our Tax Department assists with:</p>
+    <ul>
+      <li>Preparation & submission of tax returns</li>
+      <li>Capital statements & planning</li>
+      <li>Advice for expatriates</li>
+      <li>Investment, pension, and life insurance tax planning</li>
+    </ul>
+  </section>
+
+  <!-- VAT -->
+  <section>
+    <h2>Value Added Tax (VAT)</h2>
+    <p>We assist with VAT compliance, risk management, and provide consultancy on VAT-related issues.</p>
+    <ul>
+      <li>Preparation & filing of VAT/VIES/Intrastat returns</li>
+      <li>VAT diagnostic reviews</li>
+      <li>VAT registration and investigations</li>
+      <li>EORI Registration</li>
+    </ul>
+  </section>
+
+  <!-- Other Services -->
+  <section>
+    <h2>Other Tax-related Services</h2>
+    <ul>
+      <li>Capital Gains Tax</li>
+      <li>Immovable Property Tax</li>
+      <li>Company formation assistance</li>
+    </ul>
+  </section>
+
+  <!-- Trustee Services -->
+  <section>
+    <h2>Trustee Services</h2>
+    <p>We provide nominee director, shareholder, and secretary services through our trusted providers.</p>
+  </section>
+
+  <!-- Corporate Admin -->
+  <section>
+    <h2>Corporate Administrative Services</h2>
+    <ul>
+      <li>Preparation of minutes of meetings</li>
+      <li>Maintenance of statutory records</li>
+      <li>Company searches & filings</li>
+      <li>Bank account setup & support</li>
+      <li>Trade name & trademark registration</li>
+    </ul>
+  </section>
+
+  <!-- Shelf Companies -->
+  <section>
+    <h2>Ready-Made Shelf Companies</h2>
+    <p>We provide pre-registered companies available within 24 hours to help you get started quickly.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Tundra Tax & Accounting. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
